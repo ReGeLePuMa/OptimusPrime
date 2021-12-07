@@ -141,11 +141,6 @@ async def on_voice_state_update(ctx,before,after):
 
 if __name__ == '__main__':
 
-    # check that token exists in environment
-    if 'BOT_TOKEN' not in os.environ:
-        log_msg('save your token in the BOT_TOKEN env variable!', 'error')
-        exit(-1)
-
     # launch bot (blocking operation)
-    bot.run(os.environ['BOT_TOKEN'])
+    bot.run("OTEyNjUzNTY1NjcwMDg4NzQ0.YZzE3g.CrIXqlT316k3LogCXcAxJ4vKIoM")
 
