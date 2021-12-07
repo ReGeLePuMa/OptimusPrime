@@ -141,6 +141,6 @@ async def on_voice_state_update(ctx,before,after):
 
 if __name__ == '__main__':
 
-    # launch bot (blocking operation)
+    # launch bot with token (blocking operation)
     bot.run("OTEyNjUzNTY1NjcwMDg4NzQ0.YZzE3g.CrIXqlT316k3LogCXcAxJ4vKIoM")
 
