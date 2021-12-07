@@ -117,6 +117,7 @@ async def list(ctx):
 @bot.command(brief='Plays a song from the list')
 async def play(ctx,name):
     if ctx.author.voice is None:
+        await ctx.send("You are not in voice channel!")
         raise Exception("You are not in voice channel!")
     voice_channel=ctx.author.voice.channel
     if ctx.voice_client is None:
@@ -124,6 +125,7 @@ async def play(ctx,name):
     else :
         await ctx.voice_client.move_to(voice_channel)
     if name not in os.listdir("./muzica"):
+        await ctx.send("Song not found in list!")
         raise Exception("Song not found in list!")
     song=FFmpegPCMAudio(name)
     ctx.voice_client.play(song) 
